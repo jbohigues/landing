@@ -1,0 +1,53 @@
+<header class="fixed top-0 z-1 w-full">
+  <nav
+    class="animate-fade-in mx-auto flex max-w-4xl items-center justify-around py-4 text-white"
+  >
+    <a href="#" class="text-2xl">Product</a>
+    <a href="" class="hover:underline">Benefits</a>
+    <a href="" class="hover:underline">Specifications</a>
+    <a href="" class="hover:underline">Plans</a>
+    <a href="" class="hover:underline">Sectors</a>
+    <button
+      type="button"
+      class="group flex items-center gap-2 rounded-sm border-2 border-transparent bg-white px-4 py-2 text-black hover:cursor-pointer hover:border-white hover:bg-black hover:text-white"
+    >
+      <span class="play-button"></span> VideoDemo
+    </button>
+  </nav>
+</header>
+
+<style>
+  header {
+    background: transparent;
+    animation: header-blur-scroll 0.3s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 250px;
+    border-bottom: 1px solid transparent;
+  }
+
+  .play-button {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 16px solid black;
+  }
+
+  .group:hover .play-button {
+    border-left-color: white;
+  }
+
+  @keyframes header-blur-scroll {
+    0% {
+      backdrop-filter: blur(0px);
+      background: transparent;
+    }
+
+    100% {
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.5);
+      padding-bottom: var(--spacing-6);
+      border-bottom-color: black;
+    }
+  }
+</style>
